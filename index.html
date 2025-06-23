@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chocolate Cake Recipe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="recipe-card">
+    <h1> CHOCOLATE CAKE </h1>
+    <img src="https://www.giverecipe.com/wp-content/uploads/2020/06/Chocolate-Strawberry-Cake.jpg" alt="Chocolate Cake" class="dish-image">
+    <div class="info">
+      <p><strong>⏱️ Prep Time:</strong> 45 mins</p>
+      <p><strong>🍽️ Serves:</strong> 4</p>
+    </div>
+
+    <button onclick="toggleSection('ingredients')">📋 Show Ingredients</button>
+    <ul id="ingredients" class="hidden">
+      <li>2 cups flour</li>
+      <li>1 cup sugar</li>
+      <li>1 cup cocoa powder</li>
+      <li>2 eggs</li>
+      <li>1/2 cup milk</li>
+    </ul>
+
+    <button onclick="toggleSection('steps')">📝 Show Steps</button>
+    <ol id="steps" class="hidden">
+      <li>Preheat oven to 180°C.</li>
+      <li>Mix dry ingredients.</li>
+      <li>Add wet ingredients and stir well.</li>
+      <li>Pour into a greased pan.</li>
+      <li>Bake for 30 mins.</li>
+    </ol>
+
+    <button onclick="startCooking()">👨‍🍳 Start Cooking</button>
+    <div id="progress-bar"></div>
+    <div id="timer"></div>
+
+    <button onclick="window.print()">🖨️ Print Recipe</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: url('https://img.freepik.com/premium-photo/homemade-bakery-background_756748-26893.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+
+.recipe-card {
+  max-width:500px;
+  margin: auto;
+  padding: 25px;
+  background: #ffffff;
+  box-shadow: 0 10px 20px rgba(80, 1, 1, 0.15);
+  border-radius: 20px;
+  animation: fadeIn 1s ease;
+
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dish-image {
+  width: 150px;
+  height: auto; 
+  display: block;
+  margin: 0 auto 20px auto; 
+}
+
+
+
+.info p {
+  margin: 5px 0;
+  font-size: 1.1em;
+}
+
+button {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 12px 18px;
+  background: #9c27b0;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #7b1fa2;
+  transform: scale(1.05);
+}
+
+.hidden {
+  display: none;
+}
+
+ul li, ol li {
+  margin: 6px 0;
+  font-size: 1.05em;
+  transition: all 0.3s;
+}
+
+ul li:hover, ol li:hover {
+  color: #6a1b9a;
+  text-decoration: underline;
+  transform: translateX(5px);
+}
+
+#progress-bar {
+  height: 12px;
+  background: #e0e0e0;
+  margin-top: 25px;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+#progress-bar div {
+  height: 100%;
+  width: 0%;
+  background: #ba68c8;
+  transition: width 0.5s ease;
+}
+
+#timer {
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+@media print {
+  button, #progress-bar, #timer {
+    display: none;
+  }
+  body {
+    background: white;
+  }
+}
+
+@media (max-width: 600px) {
+  .recipe-card {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
